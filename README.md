@@ -1,5 +1,9 @@
 # md-editor
 
+Vue2 based MD editor, under progress.
+
+Purpose of this project is to provide the most 
+
 ## Project setup
 ```
 yarn install
