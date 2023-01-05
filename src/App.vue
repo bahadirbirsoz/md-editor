@@ -31,6 +31,7 @@
         href="https://github.com/vuetifyjs/vuetify/releases/latest"
         target="_blank"
         text
+        v-if="false"
       >
         <span class="mr-2">Latest Release</span>
         <v-icon>mdi-open-in-new</v-icon>
@@ -45,12 +46,20 @@
 
 <script lang="ts">
 import Vue from 'vue';
+import simpleTable from '@/assets/markdown/simple_table';
+import { Component } from 'vue-property-decorator';
 
-export default Vue.extend({
-  name: 'App',
+@Component
+export default class App extends Vue {
+  created() {
+    console.log('created');
+    this.$store.commit('setEditorContent', simpleTable);
+  }
 
-  data: () => ({
-    //
-  }),
-});
+  onMount() {
+    console.log('mounted');
+
+    this.$store.commit('setEditorContent', simpleTable);
+  }
+}
 </script>

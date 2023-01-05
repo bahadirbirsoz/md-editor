@@ -1,0 +1,12 @@
+version: "3.7"
+services:
+  dev:
+    image: node:16
+    volumes:
+      - '${PWD}:/app'
+    working_dir: '/app'
+    command: 'yarn serve'
+    ports:
+      - '127.0.0.1:8080:8080'
+    privileged: true
+

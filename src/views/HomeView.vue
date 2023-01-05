@@ -1,13 +1,18 @@
 <template>
   <v-container>
     <v-row>
-      <v-col cols="6">
+      <v-col>
         <md-editor></md-editor>
       </v-col>
-      <v-col cols="6">
+    </v-row>
+    <v-row>
+      <v-col>
         <code>
-          <pre>{{ $store.state.document }}</pre>
+          <pre  style="max-height: 300px; overflow: scroll">{{ $store.state.editorContent }}</pre>
         </code>
+      </v-col>
+      <v-col>
+        <code><pre>{{$store.getters.toolbar}}</pre></code>
       </v-col>
     </v-row>
   </v-container>

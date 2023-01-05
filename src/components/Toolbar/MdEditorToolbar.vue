@@ -1,11 +1,7 @@
 <template>
   <div>
-    <v-toolbar>
-      <v-toolbar-items>
-        <md-toolbar-format></md-toolbar-format>
-        <md-toolbar-actions></md-toolbar-actions>
-      </v-toolbar-items>
-    </v-toolbar>
+      <md-toolbar-format></md-toolbar-format>
+      <md-toolbar-actions></md-toolbar-actions>
   </div>
 </template>
 

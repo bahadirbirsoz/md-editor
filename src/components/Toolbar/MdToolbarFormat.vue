@@ -1,9 +1,12 @@
 <template>
-  <v-container>
-    <v-select v-model="value" :items="formats"></v-select>
-    <md-editor-toolbar-item v-for="item in actions" :item="item"
-                            :key="item.icon"></md-editor-toolbar-item>
-  </v-container>
+  <div>
+    <label for="format">
+      <select @change="input" name="format" v-model="value" :value="value">
+        <option v-for="(item) in formats" v-html="item.text" :value="item.value" :key="item.value">
+        </option>
+      </select>
+    </label>
+  </div>
 </template>
 
 <script lang="ts">
@@ -16,8 +19,7 @@ import MdEditorToolbarItem from '@/components/Toolbar/MdEditorToolbarItem.vue';
 export default class MdToolbarFormat extends Vue {
   value = 'paragraph';
 
-  actions = [
-  ];
+  actions = [];
 
   formats = [
     {
@@ -57,6 +59,10 @@ export default class MdToolbarFormat extends Vue {
       text: 'Header 7',
     },
   ];
+
+  input() {
+    this.$emit('input', this.value);
+  }
 }
 </script>
 

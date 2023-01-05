@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+<div>
     <v-row v-for="(toolbarRow, rowIndex) in items" :key="rowIndex">
       <md-editor-toolbar-item
         v-for="(item, itemIndex) in toolbarRow"
@@ -7,7 +7,7 @@
         :item="item"
       ></md-editor-toolbar-item>
     </v-row>
-  </v-container>
+</div>
 </template>
 
 <script lang="ts">

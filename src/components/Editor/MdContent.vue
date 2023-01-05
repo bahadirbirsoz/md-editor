@@ -1,6 +1,6 @@
 <template>
   <span :class="getClass">
-    {{ content }}
+    {{ element.content }}
   </span>
 </template>
 
@@ -20,18 +20,11 @@ export default class MdContent extends Vue {
     return this.element.bold && true;
   }
 
-  get content(): string {
-    if (typeof this.element === 'undefined' || typeof this.element.content === 'undefined') {
-      return '';
-    }
-    return this.element.content;
-  }
-
   get isItalic(): boolean {
-    if (typeof this.element === 'undefined' || typeof this.element.bold === 'undefined') {
+    if (typeof this.element === 'undefined' || typeof this.element.italic === 'undefined') {
       return false;
     }
-    return this.element.bold && true;
+    return this.element.italic && true;
   }
 
   get getClass(): string {

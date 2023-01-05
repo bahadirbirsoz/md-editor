@@ -16,6 +16,8 @@ module.exports = {
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'vuejs-accessibility/heading-has-content': 'off',
     'no-underscore-dangle': 'off',
+    'typescript-eslint/ban-ts-comment': 'off',
+
   },
   overrides: [
     {
